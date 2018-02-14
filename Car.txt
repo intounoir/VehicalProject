@@ -1,0 +1,65 @@
+package car.model;
+
+public class Car {
+
+    private String brand;
+    private String carGrade;
+    protected double priceRate;
+
+    public Car() {
+    }
+
+    public Car(String brand, String carGrade, double price) {
+        this.brand = brand;
+        this.carGrade = carGrade;
+        this.priceRate = price;
+    }
+
+    public String getbrand() {
+        return brand;
+    }
+
+    public void setbrand (String brand) {
+        this.brand = brand;
+    }
+
+    public double getPriceRate() {
+        return priceRate;
+    }
+
+    public void setPrice(double price) {
+        this.priceRate = price;
+    }
+
+    public String getCarGrade() {
+        return carGrade;
+    }
+
+    public void setCarGrade(String carGrade) {
+        this.carGrade = carGrade;
+    }
+
+    public double price() {
+        return priceRate;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Car temp;
+        if (obj != null && obj instanceof Car) {
+            temp = (Car) obj;
+            if (brand.equals(temp.brand) && carGrade.equals(temp.carGrade)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" + "brand=" + brand + ", carGrade=" + carGrade + ", priceRate=" + priceRate + '}';
+    }
+    
+
+
+}
