@@ -1,0 +1,30 @@
+package car.model;
+
+public class SportCar extends Car {
+    private double importRate;
+
+    public SportCar(double importRate, String brand, String carGrade, double price) {
+        super(brand, carGrade, price);
+        this.importRate = importRate;
+    }
+
+    public double getImportRate() {
+        return importRate;
+    }
+
+    public void setImportRate(double importRate) {
+        this.importRate = importRate;
+    }
+
+    @Override
+    public double price() {
+        return priceRate + importRate;
+    }
+    
+    @Override
+    public String toString() {
+        return "SportCar: " + " importRate=" + importRate + super.toString();
+    }
+
+    
+}
