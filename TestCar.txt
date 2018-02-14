@@ -1,0 +1,27 @@
+package car.view;
+
+import car.model.Car;
+import car.model.PickUpCap;
+import car.model.SportCar;
+
+public class TestCar {
+    public static void main(String[] args) {
+        SportCar car1 = new SportCar(200000, "BMW", "Top", 1000000);
+        System.out.println(car1 + " Total Price: " + car1.price());
+        
+        PickUpCap car2 = new PickUpCap(50000, "TOYOTA", "Top", 1000000);
+        System.out.println(car2 + " Total Price: " + car2.price());
+        
+        Car car3 = new Car("HONDA", "Top", 500000);
+        Car car4 = new Car("HONDA", "Normal", 100000);
+        System.out.println(car3.equals(car4));
+        
+        Car car5 = new Car("TOYOTA", "Top", 200000);
+        Car car6 = new Car("TOYOTA", "Top",500000);
+        System.out.println(car5.equals(car6));
+        
+        Car car7 = new Car("BMW", "Top", 200000);
+        Car car8 = new Car("TOYOTA", "Top",500000);
+        System.out.println(car7.equals(car8));
+    }
+}
